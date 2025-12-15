@@ -1,10 +1,20 @@
-function NavBar() {
+import navIcon from "../../assets/img/globalImg/coffee-beans.png";
+function NavBar({setPage}) {
   return ( 
-        <nav id="navContainer" class="nav nav-pills flex-column flex-sm-row">
-            <a href="#" class="navLinks flex-sm-fill text-sm-center nav-link active" id="active">Homepage</a>
-            <a href="html/aboutMe.html" class="navLinks flex-sm-fill text-sm-center nav-link">About</a>
-            <a href="html/portfolio.html" class="navLinks flex-sm-fill text-sm-center nav-link">Portfolio</a>
-            <a href="html/contact.html" class="navLinks flex-sm-fill text-sm-center nav-link">Contact</a>
+        <nav id="navContainer" className="nav nav-pills flex-column flex-sm-row">
+            <img src={navIcon} alt="" className ="navIcon"/>
+            <button 
+                className="navLinks text-sm-center nav-link active" onClick={() => setPage('home')}>
+                Home
+            </button>
+            <button 
+                className="navLinks text-sm-center nav-link" onClick={() => setPage('portfolio')}>
+                My Projects
+            </button>
+            <button 
+                className="navLinks text-sm-center nav-link" onClick={() => setPage('contact')}>
+                Contact
+            </button>
         </nav>
     )
 }

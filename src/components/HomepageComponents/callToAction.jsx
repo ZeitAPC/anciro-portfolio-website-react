@@ -1,20 +1,20 @@
 function CallToAction() {return(
     <section id="callToActionContainer">
-        <h2 class="callToActionTitle">Ready to start a project? Send me a message.</h2>
+        <h2 className="callToActionTitle">Ready to start a project?</h2>
         <article>
-            <h3 class="callToActionHeading">
+            <h3 className="callToActionHeading">
+                <a href="html/contact.html">
                 Come send me a message!
+                </a>
             </h3>
-            <a href="html/contact.html">
-                Contact me
-            </a>
+
             </article>
             <article>
-                <h3 class="callToActionHeading">
+                <h3 className="callToActionHeading">
                     Still not sure?
                 </h3>
                 <a href="html/portfolio.html">
-                    Check out my portfolio
+                    <strong>Check out my portfolio</strong>
                 </a>
         </article>
     </section>

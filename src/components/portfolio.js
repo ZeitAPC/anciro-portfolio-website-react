@@ -1,0 +1,1 @@
+export {default as ProjectHistory} from "./PortfolioPageComponents/ProjectHistory.jsx"

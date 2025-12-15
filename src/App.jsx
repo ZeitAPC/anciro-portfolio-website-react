@@ -1,16 +1,28 @@
 import { useState } from 'react'
-import './App.css'
-import {NavBar, MainHeroCard, WhatIDo, CallToAction} from './components/index.js';
-
+import './assets/css/index.css'
+import NavBar  from '../src/components/HomepageComponents/navbar.jsx'
+import Homepage from '../src/assets/pages/Homepage.jsx'
+import PortfolioPage from '../src/assets/pages/PortfolioPage.jsx'
+import ContactPage from '../src/assets/pages/ContactPage.jsx'
 function App() {
-  const [count, setCount] = useState(0)
+  const [page, setPage] = useState('home');
+
+  let content;
+  if (page ==="home"){
+    content = <Homepage />;
+  } else if (page === "portfolio"){
+    content = <PortfolioPage />
+  } else if (page === "contact"){
+    content = <ContactPage />
+  }
+
 
   return (
     <>
-      <NavBar />
-      <MainHeroCard/>
-      <WhatIDo/>
-      <CallToAction/>
+      <NavBar setPage = {setPage}/>
+      <div style={{ padding: '2rem'}}>
+        {content}
+      </div>
     </>
   )
 }

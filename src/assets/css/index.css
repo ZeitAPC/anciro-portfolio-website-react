@@ -1,0 +1,52 @@
+.heroSectionContainer{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#imageOfMe{
+    height: 13em;
+}
+.whatIDoContainerTitle{
+    width: 100%;
+}
+.mainIcon{
+    height: 13.5em;
+}
+.webDevList > li > svg, .softDevList > li > svg{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 10px 0 0;
+}
+#whatIDoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+}
+#whatIDoContainer> article{
+    margin: 0 10em;
+}
+#whatIDoContainer> article > .cardContainer{
+    width: 20em;
+    padding: 20px;
+    background-color: var(--color-text-main);
+    color: var(--color-text-muted);
+    border-radius: 2%;
+}
+.webDevList, .softDevList{
+    margin: 20px 0 0 0 ;
+}
+.webDevList > li, .softDevList > li{
+    background-color: var(--color-accent-secondary);
+        color: var(--color-text-muted);
+
+}
+
+#callToActionContainer{
+    margin: 0 0 50px 0;
+}
+
+a{
+    color: var(--color-accent-primary);
+}
