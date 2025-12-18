@@ -1,30 +1,27 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { useState } from 'react';
 import './assets/css/index.css'
 import NavBar  from '../src/components/HomepageComponents/navbar.jsx'
 import Homepage from '../src/assets/pages/Homepage.jsx'
+import AboutPage from '../src/assets/pages/AboutPage.jsx'
 import PortfolioPage from '../src/assets/pages/PortfolioPage.jsx'
 import ContactPage from '../src/assets/pages/ContactPage.jsx'
 function App() {
-  const [page, setPage] = useState('home');
-
-  let content;
-  if (page ==="home"){
-    content = <Homepage />;
-  } else if (page === "portfolio"){
-    content = <PortfolioPage />
-  } else if (page === "contact"){
-    content = <ContactPage />
-  }
-
-
+  const [activePage, setActivePage] = useState(window.location.pathname);
   return (
     <>
-      <NavBar setPage = {setPage}/>
-      <div style={{ padding: '2rem'}}>
-        {content}
-      </div>
+      <BrowserRouter>
+        <NavBar activePage = {activePage} setActivePage = {setActivePage}/>
+        <Routes>
+          <Route path="/" element={<Homepage/>} />
+          <Route path="/about" element={<AboutPage/>} />
+          <Route path="/portfolio" element={<PortfolioPage/>} />
+          <Route path="/contact" element={<ContactPage/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
+
 
 export default App

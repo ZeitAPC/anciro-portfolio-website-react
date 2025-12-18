@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 50px 0;
+    text-align: center;
 }
 #whatIDoContainer> article{
     margin: 0 10em;
@@ -45,6 +46,8 @@
 
 #callToActionContainer{
     margin: 0 0 50px 0;
+        text-align: center;
+
 }
 
 a{

@@ -18,13 +18,11 @@ function ProjectHistory() {return(
         <td>A portfolio website for me and my partner containing our resume, a video explanation about a topic, and where to contact us</td>
         <td>2023</td>
       </tr>
-      {/* Fixed class -> className */}
       <tr className="python-CLI">
         <th>Weather app<span className="badge text-bg-success" style={{ color: 'green' }}>Completed</span></th>
         <td>A CLI program made in python that checks for the weather of a location. Uses the OpenWeatherMap API</td>
         <td>2024</td>
       </tr>
-      {/* Fixed class -> className */}
       <tr className="java-CLI" >
         <th>Indirect Clothing Inc<span className="badge text-bg-success" style={{ color: 'green' }}>Completed</span></th>
         <td>A CLI program made in java that allows users to order clothes and submit a support ticket</td>
@@ -42,7 +40,6 @@ function ProjectHistory() {return(
       </tr>
       <tr className="python-CLI">
         <th scope="row">Eco-Path Finder<span className="badge text-bg-success" style={{ color: 'green' }}>Completed</span></th>
-        {/* Fixed class -> className, Fixed style object */}
         <td>A CLI program made in python that implements <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" className="dijkstraLink" target="_blank" style={{ color: 'var(--color-accent-primary)' }}>Dijkstra's Algorithm</a> and adding road types, number of stoplights,
           and congestion to the factors considered when calculating each path.</td>
         <td>2025</td>
@@ -57,7 +54,6 @@ function ProjectHistory() {return(
       <tr>
         <th scope="row">
           E-commerce Website
-          {/* Fixed style objects */}
           <div className="progress" style={{ border: '1px solid var(--color-text-main)' }} role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div className="progress-bar" style={{ width: '0%' }}></div>
           </div>

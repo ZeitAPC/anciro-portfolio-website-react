@@ -1,0 +1,88 @@
+#myCredentialsContainer,#myPhilosophyContainer, #myTechnicalExpertiseContainer,#whoAmIContainer  {
+  padding:0 0 0 2rem ;
+  margin: 2rem 0 2rem 0;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 7rem;
+}
+#myCredentialsContainer> .sectionTitle,#myPhilosophyContainer> .sectionTitle,
+#myTechnicalExpertiseContainer> .sectionTitle,#whoAmIContainer > .sectionTitle  {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+ol, ul{
+  padding: 0;
+  margin: 0;
+}
+ul{
+  list-style:none; 
+}
+
+
+#myPhilosophyContainer ul>li{
+  margin: 1rem 0;
+}
+
+#myCredentialsContainer ul> li{
+  margin:10px 0;
+}
+
+#myCredentialsContainer ul > li> button,#myCredentialsContainer ul> li> button:active {
+    background-color: var(--color-accent-primary) !important;
+    border: none;
+    width: 30rem;
+}
+.popUpCertification {
+  display: flex;               
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.popUpContent {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.popUpImageWrapper img {
+  max-width: 90vw;   
+  max-height: 80vh;  
+  object-fit: contain; 
+  display: block;
+  margin: 0 auto;
+}
+
+
+.popUpCaption {
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+#myTechnicalExpertiseContainer> ul{
+  margin: 0 0 2rem 0;
+  border-radius: 3%;
+}
+#myTechnicalExpertiseContainer> ul > li{
+  width: 25rem;
+  background-color: var(--color-accent-secondary);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-bg-surface);
+  padding: .5rem;
+}
