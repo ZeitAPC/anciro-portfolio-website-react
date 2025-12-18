@@ -10,7 +10,7 @@ function App() {
   const [activePage, setActivePage] = useState(window.location.pathname);
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar activePage = {activePage} setActivePage = {setActivePage}/>
         <Routes>
           <Route path="/" element={<Homepage/>} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/portfolio" element={<PortfolioPage/>} />
           <Route path="/contact" element={<ContactPage/>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
