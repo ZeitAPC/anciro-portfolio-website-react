@@ -1,4 +1,4 @@
-import {WhoIAm, MyPhilosophy, MyCredentials, MyTechnicalExpertise} from '../../components/aboutMe';
+import {WhoIAm, MyPhilosophy, MyCredentials, MyTechnicalExpertise} from '../../components/aboutMe.js';
 import { useEffect } from 'react';
 function AboutPage(){
     useEffect(() => {document.title = "About | My Portfolio";}, []);
