@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: 'https://zeitapc.github.io',
+  base: '/anciro-portfolio-website-react/',
 })
