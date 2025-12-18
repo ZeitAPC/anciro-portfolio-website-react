@@ -14,7 +14,6 @@ body{
     background: var(--color-text-muted);
     color: var(--color-text-main);
     font-size: 20px;
-    text-align: center;
 }
 body a{
     text-decoration: none;

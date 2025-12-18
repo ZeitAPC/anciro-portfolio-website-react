@@ -1,15 +1,15 @@
-import LinkedInCard from '../../components/ContactPageComponents/LinkedInCard'
-import OutlookCard  from '../../components/ContactPageComponents/OutlookCard'
-import NewsletterFormCard from '../../components/ContactPageComponents/NewsletterFormCard'
-
+import {LinkedInCard, OutlookCard, SendEmailDirectCard} from '../../components/contact.js';
+import { useEffect } from 'react'
 function ContactPage(){
+    useEffect(() => {document.title = "Contact | My Portfolio";}, []);
+
     return (
-        <>
+        <main id='contactPageMain'>
+            <h1 id='contactPageTitle'>Contact Page</h1>
             <LinkedInCard/>
             <OutlookCard/>
-            <NewsletterFormCard/>
-            <h1>Contact Page</h1>
-        </>
+            <SendEmailDirectCard/>
+        </main>
     )
 }
 export default ContactPage;

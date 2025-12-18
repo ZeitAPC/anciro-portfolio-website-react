@@ -1,4 +1,4 @@
-        main{
+        #portfolioPageMain{
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -30,9 +30,9 @@
             background: chocolate;
             height: 70px;
         }
-        a[href^="https"]::after{
+        /* a[href^="https"]::after{
             content: " ✓";
-        }
+        } */
         tr[class~="java-CLI"]{
             background: rgba(237, 139, 0, 0.7);
         }
