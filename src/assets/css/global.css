@@ -1,9 +1,31 @@
+
 :root{
     --color-text-main:#3B2F2F;
     --color-text-muted:#ffe9c0;
     --color-accent-secondary:#6F4E37;
     --color-bg-surface:#4B3832;
     --color-accent-primary:#d2691e;
+
+    --color-espresso: #3E2723;   /* Main Text / Primary Buttons */
+    --color-dark-roast: #5D4037; /* Secondary Text / Icons */
+    --color-latte: #D7CCC8;      /* Borders / Accents */
+    --color-steamed-milk: #F5F5F5; /* Page Background #fffde2?*/
+    --color-cream: #FFF8E1;      /* Card Highlights / Alternates */
+
+    --body-bg:var(--color-steamed-milk);
+    --body-text-color:var(--color-espresso);
+
+    /* Nav Bar colors */
+    --NavBarBg: #f3ebe2;
+    --NavLinksDefault:var(--color-dark-roast);
+    --NavLinksHover:var(--color-espresso);
+    --NavLinksHoverText:var(--color-cream);
+
+    /* Hero Section colors */
+    --HeroSectionBG:#d2af92;
+    --HeroSectionTitle:var(--color-espresso);
+    --HeroSectionImageFrame:var(--color-cream);
+    --HeroSectionShadow:rgba(62, 39, 35, 0.15);
 }
 *{
     margin: 0;
@@ -11,8 +33,8 @@
     box-sizing: border-box;
 }
 body{
-    background: var(--color-text-muted);
-    color: var(--color-text-main);
+    background: var(--body-bg);
+    color: var(--body-text-color);
     font-size: 20px;
 }
 body a{
@@ -20,42 +42,35 @@ body a{
 }
 .nav{
     display: flex;
-    background: var(--color-text-main);
+    background: var(--NavBarBg);
     height: 60px;
     align-items: center;
+    justify-content: space-around;
 }
 .navIcon{
     height: 100%;
     padding:0 0 0 20px;
 }
 #navContainer > .navLinks{
-    border-radius: 0%;
+    border-radius: 6%;
     text-align: center;
-    color: var(--color-text-muted);
+    color: var(--color-dark-roast);
     text-decoration: none;
-    margin: 0 25px;
-    height: 100%;
-    width: 9%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 5px 25px;
 }
 
-.nav-link:hover{
-    color: var(--color-text-muted);
-    background-color: var(--color-accent-secondary);
+#navContainer >.navLinks:hover{
+    color: var(--NavLinksHoverText);
+    background-color: var(--NavLinksHover);
 }
-.nav-link:focus{
-    color: var(--color-text-muted) !important;
+#navContainer >.navLinks :focus{
+    color: var(--NavLinksHoverText) !important;
 }
-.active{
-    background: var(--color-accent-secondary)!important;
-}
-#themeToggle{
-    border: none;
-    height: 100%;
-    padding: 0 20px;
-    background-color: var(--color-accent-primary);
-    color: #ffe9c0;
+#navContainer > .active{
+    background: var(--NavLinksHover)!important;
+    color: var(--NavLinksHoverText);
+    box-shadow: 0px 6px 20px 0px #888888b5;
 }

@@ -2,7 +2,6 @@ import imageOfMe from "../../assets/img/homepage/Me.png"
 function MainHeroCard() {
     return(
         <>
-
         <section className="heroSectionContainer">
             <figure className="imageOfMe">
                 <img src={imageOfMe} id="imageOfMe" alt="" />
