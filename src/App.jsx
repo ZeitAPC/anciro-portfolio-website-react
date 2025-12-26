@@ -7,8 +7,8 @@ import AboutPage from '../src/assets/pages/AboutPage.jsx'
 import PortfolioPage from '../src/assets/pages/PortfolioPage.jsx'
 import ContactPage from '../src/assets/pages/ContactPage.jsx'
 function App() {
-  const [activePage, setActivePage] = useState(window.location.pathname);
-  return (
+    const [activePage, setActivePage] = useState(window.location.pathname || "/");
+    return (
     <>
         <NavBar activePage = {activePage} setActivePage = {setActivePage}/>
         <Routes>

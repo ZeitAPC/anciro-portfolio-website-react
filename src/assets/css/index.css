@@ -1,55 +1,70 @@
-.heroSectionContainer{
+#heroSectionContainer{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #D2AF92;
+    padding: 4rem 0;
+}
+#heroSectionContainer > .heroSectionText{
+    display: flex;
+    align-items: flex-end;
     justify-content: center;
-    background-color: var(--HeroSectionBG);
+    flex-direction: column;
+}
+.heroSectionText > .heroSectionTitle{
+    font-size: 4rem;
+}
+#heroSectionContainer > .imageOfMeContainer{
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 7px #6F4E37;
+    background: var(--color-cream);
 }
 #imageOfMe{
-    height: 13em;
+    height: 90%;
 }
-.whatIDoContainerTitle{
-    width: 100%;
-}
-.mainIcon{
-    height: 13.5em;
-}
-.webDevList > li > svg, .softDevList > li > svg{
-    width: 1.5em;
-    height: 1.5em;
-    margin: 0 10px 0 0;
-}
+/*==============================================================*/
 #whatIDoContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 50px 0;
+    justify-content: space-evenly;
     text-align: center;
+    gap: 2rem;
+    padding: 5rem 0;
+    background: #f3ebe2;
+}
+.whatIDoContainerTitle{
+    width: 100%;
+    font-size: 4rem;
 }
 #whatIDoContainer> article{
-    margin: 0 10em;
-}
-#whatIDoContainer> article > .cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 20em;
     padding: 20px;
-    background-color: var(--color-text-main);
-    color: var(--color-text-muted);
+    background-color: var(--color-cream);
+    color: var(--color-espresso);
     border-radius: 2%;
-}
-.webDevList, .softDevList{
-    margin: 20px 0 0 0 ;
-}
-.webDevList > li, .softDevList > li{
-    background-color: var(--color-accent-secondary);
-        color: var(--color-text-muted);
+    box-shadow: 1px 1px 10px 4px #6F4E37;
+ }
+.iconContainer{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    background: #D2AF92;
 }
-
-#callToActionContainer{
-    margin: 0 0 50px 0;
-        text-align: center;
-
-}
-
-a{
-    color: var(--color-accent-primary);
+.mainIcon{
+    height:70%;
 }
