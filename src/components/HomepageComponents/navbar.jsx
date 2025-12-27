@@ -21,8 +21,7 @@ function NavBar({activePage}) {
                 <Link
                     key={link.path} // required by React for list rendering
                     to={link.path}
-                    className={`${baseClass}${activePage === link.path ? " active" : ""}`}
-                >
+                    className={`${baseClass}${activePage === link.path ? " active" : ""}`}>
                     {link.label}
                 </Link>
             ))}
