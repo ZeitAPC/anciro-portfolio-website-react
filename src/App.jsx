@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
-import './assets/css/index.css'
 import NavBar  from './components/common/navbar.jsx'
 import Homepage from '../src/assets/pages/Homepage.jsx'
 import PortfolioPage from '../src/assets/pages/PortfolioPage.jsx'
