@@ -1,5 +1,5 @@
 function MyPhilosophy() {return(
-            <section id="myPhilosophyContainer">
+            <section id="">
             <h1 className="sectionTitle">My programming philosophy</h1>
             <ul id="sectionBody">
                 <li class="philosophy">

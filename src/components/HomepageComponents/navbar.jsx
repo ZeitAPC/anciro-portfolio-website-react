@@ -1,27 +1,29 @@
 import { Link, useLocation } from "react-router-dom";
-import navIcon from "../../assets/img/globalImg/coffee-beans.png";
+import navIcon from "../../assets/img/globalImg/CoffeeBeans.png";
 function NavBar({activePage}) {
     const location = useLocation();
-    activePage = location.pathname; // automatically updates when route changes
+    activePage = location.pathname;
 
-    const baseClass = "navLinks text-sm-center nav-link ";
+    const baseClass = "rounded-[2%] py-[5px] px-[25px] text-center flex items-center justify-center hover:bg-accent-secondary hover:text-[#FFF8E1] ";
     const navBarLinks = [
         { label: "Home", path: "/" },
-        { label: "About", path: "/about" },
         { label: "Projects", path: "/portfolio" },
         { label: "Contact", path: "/contact" }
     ];
 
     return (
-        <nav id="navContainer" className="nav nav-pills flex-column flex-sm-row">
-            <img src={navIcon} alt="" className="navIcon" />
+        <nav id="navContainer" className="
+        flex items-center justify-evenly
+        h-15
+        z-10
+        ">
+        <img src={navIcon} alt="" className="h-full pl-5" />
 
-            {/* Map over links and highlight the one that matches the current URL */}
             {navBarLinks.map(link => (
                 <Link
-                    key={link.path} // required by React for list rendering
+                    key={link.path}
                     to={link.path}
-                    className={`${baseClass}${activePage === link.path ? " active" : ""}`}>
+                    className={`${baseClass}${activePage === link.path ? " bg-accent-secondary text-text-muted shadow-[0px_0px_20px_0px_#6F4E37]" : ""}`}>
                     {link.label}
                 </Link>
             ))}

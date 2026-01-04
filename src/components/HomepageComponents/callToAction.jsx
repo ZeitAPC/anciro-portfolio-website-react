@@ -1,15 +1,17 @@
 import {Link} from "react-router-dom";
 
-function CallToAction() {return(
-    <section id="callToActionContainer">
-        <h2 className="callToActionTitle">Ready to start something amazing?</h2>
+function CallToAction() {
+    const callToActionContainer = "flex flex-col justify-center items-center bg-[#D2AF92] py-[80px] gap-[40px]";
+    return(
+    <section className={callToActionContainer}>
+        <h2 >Ready to start something amazing?</h2>
             <h3 >
-                <Link to={'/contact'} className="callToActionLink">
+                <Link to={'/contact'} className="bg-[#3E2723] text-[#FFF8E1] border-0 p-[20px] rounded-[500px] shadow-[1px_1px_10px_4px_#6F4E37] flex items-center w-auto">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 113.5 122.88"
                         aria-hidden="true"
-                        className="btnIcon"
+                        className="h-[50px] mx-[20px] fill-[#FFF8E1]"
                     >
                         <path
                             fillRule="evenodd"

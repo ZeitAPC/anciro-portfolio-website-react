@@ -1,29 +1,4 @@
 
-#heroSectionContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 4rem 0;
-    background:
-            linear-gradient(
-                    180deg,
-                    rgba(210,175,146,1) 0%,
-                    rgba(210,175,146,1) 75%,
-                    rgba(243,235,226,1) 100%
-            );
-    position: relative;
-}
-.heroSectionText, .imageOfMeContainer{
-    z-index: 10;
-    position: relative;
-}
-#heroSectionContainer > .heroSectionText{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-}
 .heroSectionText > .heroSectionTitle{
     font-size: 4rem;
 }
@@ -53,79 +28,11 @@
     align-items: flex-end;
     z-index: 0;
 }
-.backgroundIcon{
-    height: 216px;
-    opacity: 50%;
-}
+
 /*==============================================================*/
-#whatIDoContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    text-align: center;
-    gap: 2rem;
-    padding: 5rem 0;
-    background: linear-gradient(180deg,rgba(243, 235, 226, 1) 0%, rgba(243, 235, 226, 1) 25%, rgba(243, 235, 226, 1) 50%, rgba(243, 235, 226, 1) 75%, rgba(210, 175, 146, 1) 100%);
-}
-.whatIDoContainerTitle{
-    width: 100%;
-    font-size: 4rem;
-}
-#whatIDoContainer> article{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 20em;
-    padding: 20px;
-    background-color: var(--color-cream);
-    color: var(--color-espresso);
-    border-radius: 2%;
-    box-shadow: 1px 1px 10px 4px #6F4E37;
- }
-.iconContainer{
-    height: 20rem;
-    width: 20rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    background: #D2AF92;
-}
-.mainIcon{
-    height:70%;
-}
+
+
+
 /*============================================*/
-#callToActionContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
-    background: #D2AF92;
-
-    padding: 5rem 0;
-    gap: 2.5rem;
-}
-.callToActionLink{
-    background:var(--color-cream);
-    color:var(--color-espresso);
-    border:none;
-    padding:20px;
-
-    border-radius:500px;
-    box-shadow: 1px 1px 10px 4px #6F4E37;
-
-
-    display: flex;
-    width: auto;
-    align-items: center;
-
-}
-.btnIcon{
-    height:50px;
-    fill:var(--color-espresso);
-    margin:0 20px;
-
-}

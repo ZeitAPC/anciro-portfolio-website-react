@@ -1,7 +1,9 @@
-function DividerWithIcon({dividerColor}){return (
-    <div className="dividerWrapper" style={{ backgroundColor: dividerColor }}>
-        <div className="divider"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 96.84" aria-hidden="true" className="borderIcon">
+function DividerWithIcon(){
+    const dividerColor = "bg-cream h-[1px] w-[30%] shadow-[0px_0px_10px_2px_#D7CCC8]";
+    return (
+    <div className="flex justify-center items-center">
+        <div className={dividerColor}></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 96.84" aria-hidden="true" className="h-[2rem] mx-[2rem] fill-current">
             <g>
                 <path fillRule="evenodd" clipRule="evenodd" d="M31.96,0c14.08,0,26.03,12.61,30.29,30.11c-1.07,0.94-2.12,1.92-3.15,2.95
                 c-9.36,9.36-15.11,20.63-16.82,31.26c-1.2,7.41-0.44,14.53,2.38,20.54
@@ -18,7 +20,7 @@ function DividerWithIcon({dividerColor}){return (
                 C32.66,53.72,38.68,66.29,33.31,88.46z"/>
             </g>
         </svg>
-        <div className="divider"></div>
+        <div className={dividerColor}></div>
     </div>
 )
 }

@@ -1,6 +1,14 @@
-function MyTechnicalExpertise() {return(
-            <section id="myTechnicalExpertiseContainer">
-            <h1 className="sectionTitle">My technical expertise</h1>
+import ToolsIcon from "../../src/assets/img/globalImg/toolsIcon.svg"
+import CardWithIcon from "../../src/components/common/CardWithIcon.jsx"
+function MyTechnicalExpertise() {
+
+    const ToolsData = {
+        CardIcon: ToolsIcon, CardTitle: "My tools", CardText: "Git, Github, Intellij, Pycharm, VirtualBox"
+    }
+
+    return(
+            <section className="px-[1rem] py-[1rem] flex flex-row flex-wrap justify-center gap-x-[7rem] bg-[#D2AF92]">
+            <h1 className="text-[4rem] w-[100%] text-center my-[2rem]">My technical expertise</h1>
             <ul id="programmingLanguages"  className="list-group">
                 <li className="listTitle active list-group-item"><h2>Programming language</h2></li>
                 <li className="list-group-item">Java</li>
@@ -26,6 +34,7 @@ function MyTechnicalExpertise() {return(
                 <li className="listTitle active list-group-item"><h2>Databases</h2></li>
                 <li className="list-group-item">MySQL</li>
             </ul>
+            <CardWithIcon cardData={ToolsData} />
         </section>
 )}
 export default MyTechnicalExpertise;

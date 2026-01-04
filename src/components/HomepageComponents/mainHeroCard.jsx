@@ -1,13 +1,21 @@
 import heroSectionDisplayPicture from "../../assets/img/homepage/heroSectionDisplayPicture.png"
 function MainHeroCard() {
     return(
-        <section id="heroSectionContainer">
-            <figure id="heroSectionBGDesign">
+        <section className="
+        flex flex-row justify-evenly items-center
+        py-[4rem] relative
+        ">
+            <figure className="
+            absolute top-0 left-0
+            w-full h-full
+            flex justify-end items-end
+            z-0
+            ">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 122.88 96.84"
                     aria-hidden="true"
-                    className="backgroundIcon"
+                    className="h-[216px] opacity-50"
                 >
                     <g>
                         <path
@@ -30,12 +38,24 @@ function MainHeroCard() {
                     </g>
                 </svg>
             </figure>
-            <article className="heroSectionText">
-                <h1 className="heroSectionTitle">Hi, I'm Francis!</h1>
-                <p className="heroSectionSubtext">An all around developer for your needs.</p>
+            <article className="z-10 relative flex items-end justify-center flex-col">
+                <h1 className="text-[4rem] font-bold">Hi, I'm Francis!</h1>
+                <p className="text-right">
+                    A Computer Science Undergraduate majoring in Cybersecurity and Forensics
+                    <br/>
+                    <br/>
+                    I combine my skills in cybersecurity, cloud, and programming
+                    <br/>
+                    to create and deploy secure and efficient services
+                </p>
             </article>
-            <figure className="imageOfMeContainer">
-                <img src={heroSectionDisplayPicture} id="imageOfMe" alt=""/>
+            <figure className="z-10 relative
+            h-[20rem] w-[20rem]
+            flex flex-wrap justify-center items-center
+            rounded-[50%]
+            bg-cream m-0 shadow-[1px_1px_20px_7px_#6F4E37]
+            ">
+                <img src={heroSectionDisplayPicture} id="imageOfMe" alt="" className="h-[90%]"/>
                 </figure>
         </section>
     )

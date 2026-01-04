@@ -1,65 +1,58 @@
+import React ,{useRef} from "react";
+import emailjs from "@emailjs/browser";
 function SendEmailDirectCard() {
+  const inputContainer ="mb-[16px] flex flex-col";
+  const textFieldLabelStyle = "text-left mb-[5px]";
+  const textFieldStyle = "border-b-2 border-espresso  h-[40px] pl-[10px] focus:outline-none bg-[#D2AF92] text-text-main";
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+        .sendForm(
+            import.meta.env.VITE_SERVICE_ID,
+            import.meta.env.VITE_TEMPLATE_ID,
+            form.current,
+            {
+              publicKey: import.meta.env.VITE_PUBLIC_KEY,
+            }
+        )
+        .then(
+            () => {
+              alert('Message sent successfully!');
+              e.target.reset();
+            },
+            (error) => {
+              console.error('FAILED...', error.text);
+              alert('Failed to send message.');
+            },
+        );
+  };
     return (
-<>
-  <form className="row g-3 needs-validation sendEmailDirectCard card" noValidate>
-    <h2>Send me a message right here!</h2>
+  <form className="bg-cream text-espresso rounded-[2%] shadow-[1px_1px_10px_4px_#6F4E37] p-[2rem] h-fit"  ref={form} onSubmit={sendEmail}>
+    <h2 className="text-[2rem] font-semibold mb-1">Send me a message right here!</h2>
     
-    <div className="col-md-12 mb-3 inputField">
-      <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
-      <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-    </div>
-    
-    <div className="col-md-12 mb-3 inputField">
-      <label htmlFor="exampleFormControlTextarea1" className="form-label">Your message: </label>
-      <textarea className="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+    <div className={inputContainer}>
+      <label className={textFieldLabelStyle}>Email address</label>
+      <input type="email" className={textFieldStyle} name="user_email" placeholder="name@example.com" required/>
     </div>
 
-    <div className="termsAndConditionsCheckbox col-12">
-      <div className="form-check">
-        <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-        <label className="form-check-label" htmlFor="invalidCheck">
-          Agree to terms and conditions
-        </label>
-        <div className="invalid-feedback">
-          You must agree before submitting.
-        </div>
-      </div>
+    <div className={inputContainer}>
+      <label className={textFieldLabelStyle}>Name</label>
+      <input type="text" className={textFieldStyle} name="from_name" placeholder="Name here" required/>
     </div>
+
+    <div className={inputContainer}>
+      <label  className={textFieldLabelStyle}>Your message: </label>
+      <textarea className={textFieldStyle}  rows="2" name="message" placeholder="Let's collaborate!" required></textarea>
+    </div>
+
     
     <div className="col-12">
-      <button className="btn btn-primary btn-lg" type="submit">Submit form</button>
+      <button className="flex justify-start items-center p-[10px] bg-[#6F4E37] text-[#FFF8E1] rounded-[5px] w-[22rem] cursor-pointer" type="submit">Send message</button>
     </div>
   </form>
-</>
     )
 }
 export default SendEmailDirectCard;
-        {/* <section className="newsLetterFormContainer">
-            <p className="h2" style={{ textAlign: 'center', margin: '25px 0' }}>Sign up to my newsletter</p>
-            
-            <form name="newsLetter" id="newsLetter">
-                <div className="form-group">
-                    <label htmlFor="exampleInputFirstName">First name</label>
-                    <input type="text" className="form-control" id="exampleInputFirstName" aria-describedby="emailHelp" placeholder="Ex: Juan" name="fName" />
-                    
-                    <small id="emailHelp" className="form-text" style={{ color: 'var(--color-text-muted)' }}>We'll never share your email with anyone else.</small>
-                </div>
-                
-                <div className="form-group">
-                    <label htmlFor="exampleInputLastName">Last name</label>
-                    <input type="text" className="form-control" id="exampleInputLastName" aria-describedby="emailHelp" placeholder="Ex: Dela Cruz" name="lName" />
-                </div>
-                
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: jdelacruz@example.com" name="email" />
-                </div>
-                
-                <div className="form-check">
-                    <input type="checkbox" className="form-check-input" id="newsLetterCheckBox" />
-                    <label id="newsLetterCheckBoxLabel" className="form-check-label" htmlFor="newsLetterCheckBox">Sign up for news and updates</label>
-                </div>
-                
-                <button type="submit" className="btn btn-primary" id="submitFormButton">Submit</button>
-            </form>
-        </section> */}
