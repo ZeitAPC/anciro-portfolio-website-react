@@ -10,7 +10,8 @@ function Homepage(){
         <DividerWithIcon/>
         <WhatIDo />
         <DividerWithIcon/>
-        <MyCredentials />
+        <MyCredentials/>
+        <DividerWithIcon/>
         </>
     )
 }

@@ -4,7 +4,8 @@ import CybersecurityIcon from "../../assets/img/homepage/cybersecurityIcon.svg";
 import CloudIcon from "../../assets/img/homepage/cloudIcon.svg";
 import CardWithIcon from "../common/CardWithIcon.jsx";
 function WhatIDo() {
-
+    const sectionStyle = "flex flex-wrap justify-evenly text-center gap-[2rem] py-[5rem]"
+    const pageTitle = "w-full text-[4rem] font-bold";
     const ListofCardData = {
         // WebDevData: {CardIcon: WebDevIcon, CardTitle: "Web Development", CardText: "HTML, CSS, JS, React Vite, Bootstrap."},
         SoftDevData: {
@@ -23,29 +24,15 @@ function WhatIDo() {
             CardText: "Tools: AWS Security, Azure Security, GCP Security, IAM, CloudFirewalls, SIEM"
         },
     }
-
     return(
-<section id="" className="
-    flex flex-wrap
-    justify-evenly
-    text-center
-    gap-[2rem] py-[5rem]
-">
-        <h1 className="
-        w-full
-        text-[4rem]
-        ">What I do</h1>
-    {Object.values(ListofCardData).map(card =>
-        <CardWithIcon
-        key = {card.CardTitle}
-        cardData={card}
-        />
+        <section id="" className={sectionStyle}>
+            <h1 className={pageTitle}>What I do</h1>
+            {Object.values(ListofCardData).map(card =>
+                <CardWithIcon
+                key = {card.CardTitle}
+                cardData={card}
+                />)}
+        </section>
     )}
-
-
-</section>
-
-    )
-}
 
 export default WhatIDo;

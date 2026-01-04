@@ -17,7 +17,7 @@ function CardWithIcon({cardData}) {
         </figure>
         <article className="card-body">
             <h5 className="text-[2rem]">{CardTitle}</h5>
-            <p className="my-[10px]">{CardText}</p>
+            {CardText && <p className="my-[10px]">{CardText}</p>}
         </article>
         {ButtonFunction && <button onClick={ButtonFunction} className={buttonStyle}>{ButtonText}</button>}
     </article>

@@ -45,7 +45,7 @@ function SendEmailDirectCard() {
 
     <div className={inputContainer}>
       <label  className={textFieldLabelStyle}>Your message: </label>
-      <textarea className={textFieldStyle}  rows="2" name="message" placeholder="Let's collaborate!" required></textarea>
+      <textarea className={textFieldStyle}  name="message" placeholder="Let's collaborate!" required></textarea>
     </div>
 
     

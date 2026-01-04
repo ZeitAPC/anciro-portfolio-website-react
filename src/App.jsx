@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
 import './assets/css/index.css'
-import NavBar  from '../src/components/HomepageComponents/navbar.jsx'
+import NavBar  from './components/common/navbar.jsx'
 import Homepage from '../src/assets/pages/Homepage.jsx'
 import PortfolioPage from '../src/assets/pages/PortfolioPage.jsx'
 import ContactPage from '../src/assets/pages/ContactPage.jsx'
+import Footer from './components/common/Footer.jsx'
 function App() {
     const [activePage, setActivePage] = useState(window.location.pathname || "/");
     return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/portfolio" element={<PortfolioPage/>} />
           <Route path="/contact" element={<ContactPage/>} />
         </Routes>
+        <Footer />
     </>
   )
 }
