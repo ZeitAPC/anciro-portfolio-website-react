@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import navIcon from "../../assets/img/globalImg/CoffeeBeans.png";
+import {coffeeBeans} from "../../assets/img/global"
 function NavBar({activePage}) {
     const location = useLocation();
     activePage = location.pathname;
@@ -17,7 +17,7 @@ function NavBar({activePage}) {
         h-15
         z-10
         ">
-        <img src={navIcon} alt="" className="h-full pl-5" />
+        <img src={coffeeBeans} alt="" className="h-full pl-5" />
 
             {navBarLinks.map(link => (
                 <Link

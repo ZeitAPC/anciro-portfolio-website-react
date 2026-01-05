@@ -7,16 +7,14 @@ import {Cert_FoundationsofAlgorithmicThinking,
         Cert_PythonDataStructuresStacksDequesandQueues,
         Cert_PythonDataStructuresTrees,
         Cert_PythonRecursion,
-} from "../../assets/img/aboutpage/certifications/ExportCertifications.js"
+} from "../../assets/img/about/certifications/index.js"
 
-import CardWithIcon from "../common/CardWithIcon.jsx";
-import PopUp from "../HomepageComponents/PopUp.jsx";
-import SoftwareDevIcon from "../../assets/img/globalImg/softwareDevIcon.svg"
-import ToolsIcon from "../../assets/img/globalImg/toolsIcon.svg";
-import NetworkingIcon from "../../assets/img/homepage/networkingIcon.svg";
-import ResumeIcon from "../../assets/img/homepage/resumeIcon.svg";
 import Resume from "../../../public/files/Anciro_Resume.pdf"
-import ButtonList from "../common/ButtonList.jsx"
+
+import {PopUp} from "./";
+import {devIcon, toolsIcon, networkingIcon, resumeIcon} from "../../assets/img/homepage/"
+import {CardWithIcon, ButtonList} from "../../components/common"
+
 function MyCredentials() {
     const [popUp, setPopUp] = useState(false);
     const [popUpContent, setPopUpContent] = useState({
@@ -31,22 +29,22 @@ function MyCredentials() {
         window.open(url, "_blank", "noopener,noreferrer");
     }
     const SoftwareDevCertificateData = {
-        FoundationsOfAlgorithmicThinking: {icon: SoftwareDevIcon, buttonText: "Foundations of Algorithmic Thinking",onClick: () => showPopUp(Cert_FoundationsofAlgorithmicThinking, "Foundations of Algorithmic Thinking")},
-        FundamentalsofDynamicProgramming: {icon: SoftwareDevIcon, buttonText: "Fundamentals of Dynamic Programming",onClick: () => showPopUp(Cert_FundamentalsofDynamicProgramming, "Fundamentals of Dynamic Programming")},
-        DataStructuresLinkedList: {icon: SoftwareDevIcon, buttonText: "Data Structures: Linked List",onClick: () => showPopUp(Cert_PythonDataStructuresLinkedLists, "Data Structures: Linked List")},
-        DataStructuresStacksQueuesAndDequeue: {icon: SoftwareDevIcon, buttonText: "Data Structures: Stacks, Queues, and Dequeue",onClick: () => showPopUp(Cert_PythonDataStructuresStacksDequesandQueues, "Data Structures: Stacks, Queues, and Dequeue")},
-        DataStructuresTrees: {icon: SoftwareDevIcon, buttonText: "Data Structures: Trees",onClick: () => showPopUp(Cert_PythonDataStructuresTrees, "Data Structures: Trees")},
-        PythonRecursion: {icon: SoftwareDevIcon, buttonText: "Python Recursion",onClick: () => showPopUp(Cert_PythonRecursion, "Python Recursion")},
+        FoundationsOfAlgorithmicThinking: {icon: devIcon, buttonText: "Foundations of Algorithmic Thinking",onClick: () => showPopUp(Cert_FoundationsofAlgorithmicThinking, "Foundations of Algorithmic Thinking")},
+        FundamentalsofDynamicProgramming: {icon: devIcon, buttonText: "Fundamentals of Dynamic Programming",onClick: () => showPopUp(Cert_FundamentalsofDynamicProgramming, "Fundamentals of Dynamic Programming")},
+        DataStructuresLinkedList: {icon: devIcon, buttonText: "Data Structures: Linked List",onClick: () => showPopUp(Cert_PythonDataStructuresLinkedLists, "Data Structures: Linked List")},
+        DataStructuresStacksQueuesAndDequeue: {icon: devIcon, buttonText: "Data Structures: Stacks, Queues, and Dequeue",onClick: () => showPopUp(Cert_PythonDataStructuresStacksDequesandQueues, "Data Structures: Stacks, Queues, and Dequeue")},
+        DataStructuresTrees: {icon: devIcon, buttonText: "Data Structures: Trees",onClick: () => showPopUp(Cert_PythonDataStructuresTrees, "Data Structures: Trees")},
+        PythonRecursion: {icon: devIcon, buttonText: "Python Recursion",onClick: () => showPopUp(Cert_PythonRecursion, "Python Recursion")},
     }
     const NetworkingCertificateData = {
-        NetworkingBasics:{icon: NetworkingIcon, buttonText: "Networking Basics",onClick: () => showPopUp(Cert_NetworkingBasics, "Networking Basics")}
+        NetworkingBasics:{icon: networkingIcon, buttonText: "Networking Basics",onClick: () => showPopUp(Cert_NetworkingBasics, "Networking Basics")}
     }
     const ToolsCertificateData = {
-        MasterMicrosoftTeams:{icon: ToolsIcon, buttonText: "Master Microsoft Teams",onClick: () => showPopUp(Cert_MasterMicrosoftTeams, "Master Microsoft Teams")}
+        MasterMicrosoftTeams:{icon: toolsIcon, buttonText: "Master Microsoft Teams",onClick: () => showPopUp(Cert_MasterMicrosoftTeams, "Master Microsoft Teams")}
     }
     const ResumeData = {
         Resume: {
-        CardIcon: ResumeIcon,
+        CardIcon: resumeIcon,
         CardTitle:"Resume",
         ButtonText: "Check my Resume",
         ButtonFunction: () => openLink(Resume)}

@@ -1,4 +1,4 @@
-import heroSectionDisplayPicture from "../../assets/img/homepage/heroSectionDisplayPicture.png";
+import {heroSectionDisplayPicture} from "../../assets/img/homepage/"
 function MainHeroCard() {
     const sectionStyle = "flex flex-row justify-evenly items-center py-[4rem] relative";
     const bgFigureStyle = " absolute top-0 left-0 w-full h-full flex justify-end items-end z-0";

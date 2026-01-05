@@ -1,25 +1,21 @@
-import WebDevIcon from "../../assets/img/homepage/webDevIcon.svg";
-import SoftwareDevIcon from "../../assets/img/globalImg/softwareDevIcon.svg";
-import CybersecurityIcon from "../../assets/img/homepage/cybersecurityIcon.svg";
-import CloudIcon from "../../assets/img/homepage/cloudIcon.svg";
-import CardWithIcon from "../common/CardWithIcon.jsx";
+import {devIcon, cybersecurityIcon, cloudIcon} from "../../assets/img/homepage"
+import {CardWithIcon} from "../common/"
 function WhatIDo() {
     const sectionStyle = "flex flex-wrap justify-evenly text-center gap-[2rem] py-[5rem]"
     const pageTitle = "w-full text-[4rem] font-bold";
-    const ListofCardData = {
-        // WebDevData: {CardIcon: WebDevIcon, CardTitle: "Web Development", CardText: "HTML, CSS, JS, React Vite, Bootstrap."},
+    const ListOfCardData = {
         SoftDevData: {
-            CardIcon: WebDevIcon,
+            CardIcon: devIcon,
             CardTitle: "Software & Front-End Development",
             CardText: "Java, Python, Vite, Tailwind, TypeScript",
         },
-        CybersecData: {
-                CardIcon: CybersecurityIcon,
+        CybersecurityData: {
+                CardIcon: cybersecurityIcon,
                 CardTitle: "Defensive Cybersecurity",
                 CardText: "Tools: Firewalls, SIEMs, IDS/IPS, Endpoint Security"
         },
         CloudData: {
-            CardIcon: CloudIcon,
+            CardIcon: cloudIcon,
             CardTitle: "Cloud Security",
             CardText: "Tools: AWS Security, Azure Security, GCP Security, IAM, CloudFirewalls, SIEM"
         },
@@ -27,7 +23,7 @@ function WhatIDo() {
     return(
         <section id="" className={sectionStyle}>
             <h1 className={pageTitle}>What I do</h1>
-            {Object.values(ListofCardData).map(card =>
+            {Object.values(ListOfCardData).map(card =>
                 <CardWithIcon
                 key = {card.CardTitle}
                 cardData={card}
