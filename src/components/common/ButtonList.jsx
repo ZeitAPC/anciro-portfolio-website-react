@@ -1,17 +1,20 @@
-function ButtonList({buttonData}) {
-    const buttonIconStyle = "h-[40px] w-[40px] mx-[10px] p-[5px] rounded-[50%] bg-[#D2AF92] flex justify-center items-center";
-    const {icon, buttonText, onClick} = buttonData
+import ButtonItem from "./ButtonItem.jsx"
+function ButtonList({listTitle, buttonData}) {
+    // Wrapper component for individual ButtonItem
     return (
         <ul>
-            <li className="my-[1rem]">
-                <button className="flex justify-start items-center p-[7px] bg-[#6F4E37] text-[#FFF8E1] rounded-[5px] w-[35rem] cursor-pointer"
-                        onClick={onClick}>
-                    <figure className={buttonIconStyle}>
-                        <img src={icon} alt=""/>
-                    </figure>
-                    {buttonText}
-                </button>
-            </li>
+            {listTitle && //render title only if argument is passed
+                <li>
+                    <h2 className="text-[2rem]">{listTitle}</h2>
+                </li>
+            }
+
+            {buttonData && //render component only if argument is passed
+
+                //Maps data to object
+                Object.values(buttonData).map(btn => (
+                    <ButtonItem key={btn.buttonText} buttonData={btn} />
+            ))}
         </ul>
     )
 }

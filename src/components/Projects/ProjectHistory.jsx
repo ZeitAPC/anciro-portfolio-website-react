@@ -1,8 +1,8 @@
 import {CardWithIcon} from "../common/";
-import {barangayTaskManagerIcon, directClothingIncIcon, ecoPathFinder} from "../../assets/img/project/"
+import {barangayTaskManagerIcon, directClothingIncIcon, ecoPathFinder, weatherAppIcon} from "../../assets/img/project/";
 
 function ProjectHistory() {
-  // Data for cards
+  // All project data under one object for organization and easy mapping to CardWithIcon component
   const ProjectData = {
     //Data for EcoPathFinder card
     EcoPathFinder : {
@@ -30,13 +30,19 @@ function ProjectHistory() {
       ButtonText: "Download DirectClothingInc.zip",
       ButtonFunction: () => {window.location.href = "/anciro-portfolio-website-react/files/com.zip";},
     },
+    WeatherApp: {
+      CardIcon: weatherAppIcon,
+      CardTitle: "Weather App",
+      CardText: "A weather app to check the weather of a city",
+      ButtonText: "Download WeatherApp",
+      ButtonFunction: () => {window.location.href = "/anciro-portfolio-website-react/files/WeatherApp.exe";},
+    },
   }
-  // Faded bg image
+  // Faded bg image. ::before is used to position it behind the content and achieve the fading effect
   const mainBG ="before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-[url(https://c4.wallpaperflare.com/wallpaper/598/508/1011/coffee-spoon-cup-bag-wallpaper-preview.jpg)] before:bg-no-repeat before:bg-cover before:bg-center before:opacity-10";
-  const mainStyle = `flex flex-wrap justify-evenly text-center gap-[2rem] py-[4rem] ${mainBG}`;
 
   return(
-<main className={mainStyle}>
+<main className={`flex flex-wrap justify-evenly text-center gap-[2rem] py-[4rem] ${mainBG}`}>
   <h1 className="text-[#FFF1DC] font-bold text-[4rem] w-full">MY PROJECTS</h1>
 
   {/* Render each card from the data object */}

@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
-import {MainHeroCard, WhatIDo, MyCredentials} from "../components/Homepage"
-import {DividerWithIcon} from "../components/common/"
+import {HeroCard, WhatIDo, MyCredentials} from "../components/Homepage";
+import {DividerWithIcon} from "../components/common/";
 function Homepage(){
+    // This component is a wrapper for all other components to be shown on the home page
     useEffect(() => {document.title = "Home | My Projects";}, []);
     return(
+        // DividerWithIcon is a just for design
         <>
-        <MainHeroCard />
+        <HeroCard />
         <DividerWithIcon/>
         <WhatIDo />
         <DividerWithIcon/>

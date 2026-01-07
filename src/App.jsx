@@ -1,13 +1,11 @@
 import {Routes, Route} from 'react-router-dom';
-import { useState } from 'react';
 import {NavBar, Footer} from "./components/common"
 import {Homepage, ProjectsPage, ContactPage} from "./pages/"
 
 function App() {
-    const [activePage, setActivePage] = useState(window.location.pathname || "/");
     return (
     <>
-        <NavBar activePage = {activePage} setActivePage = {setActivePage}/>
+        <NavBar/>
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/portfolio" element={<ProjectsPage/>} />
@@ -19,4 +17,4 @@ function App() {
 }
 
 
-export default App
+export default App;
