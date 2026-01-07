@@ -39,7 +39,7 @@ function ProjectHistory() {
     },
   }
   // Faded bg image. ::before is used to position it behind the content and achieve the fading effect
-  const mainBG ="before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-[url(https://c4.wallpaperflare.com/wallpaper/598/508/1011/coffee-spoon-cup-bag-wallpaper-preview.jpg)] before:bg-no-repeat before:bg-cover before:bg-center before:opacity-10";
+  const mainBG ="before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-[url(https://c4.wallpaperflare.com/wallpaper/598/508/1011/coffee-spoon-cup-bag-wallpaper-preview.jpg)] before:bg-no-repeat before:bg-cover before:bg-center before:opacity-10 before:shadow-[inset_0px_-20px_20px_20px_#2B1E1A]";
 
   return(
 <main className={`flex flex-wrap justify-evenly text-center gap-[2rem] py-[4rem] ${mainBG}`}>

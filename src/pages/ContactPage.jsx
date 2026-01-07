@@ -18,7 +18,7 @@ function ContactPage(){
     }
 
     // Faded bg image
-    const mainBeforeBG = "before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-[url(https://c4.wallpaperflare.com/wallpaper/826/178/391/coffee-beans-hot-cup-coffee-bag-wallpaper-preview.jpg)] before:bg-no-repeat before:bg-cover before:bg-center before:opacity-10";
+    const mainBeforeBG = "before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-[url(https://c4.wallpaperflare.com/wallpaper/826/178/391/coffee-beans-hot-cup-coffee-bag-wallpaper-preview.jpg)] before:bg-no-repeat before:bg-cover before:bg-center before:opacity-10 before:shadow-[inset_0px_-20px_20px_20px_#2B1E1A]";
 
     //Open external links
     const openLink = (url) => {
