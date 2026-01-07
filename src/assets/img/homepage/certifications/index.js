@@ -6,3 +6,5 @@ export {default as Cert_PythonDataStructuresLinkedLists} from './PythonDataStruc
 export {default as Cert_PythonDataStructuresStacksDequesandQueues} from './PythonDataStructuresStacksDequesandQueues.jpg';
 export {default as Cert_PythonDataStructuresTrees} from './PythonDataStructuresTrees.jpg';
 export {default as Cert_PythonRecursion} from './PythonRecursion.jpg';
+export {default as Cert_ReactEssentialTraining} from './ReactEssentialTraining.jpg';
+export {default as Cert_TailwindCSS4EssentialTraining} from './TailwindCSS4EssentialTraining.jpg';

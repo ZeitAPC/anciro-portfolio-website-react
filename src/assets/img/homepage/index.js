@@ -1,5 +1,4 @@
 export {default as cloudIcon} from "./cloudIcon.svg";
-export {default as coffeeBeanIcon} from "./coffeeBeanIcon.svg";
 export {default as cybersecurityIcon} from "./cybersecurityIcon.svg";
 export {default as devIcon} from "./devIcon.svg";
 export {default as heroSectionDisplayPicture} from "./heroSectionDisplayPicture.png";
