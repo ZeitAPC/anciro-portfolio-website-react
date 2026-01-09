@@ -57,7 +57,7 @@ function SendEmailDirectCard() {
 
         {/*Submit button*/}
         <div className="col-12">
-            <button className="flex justify-start items-center p-[10px] bg-[#6F4E37] text-[#FFF8E1] rounded-[5px] w-[22rem] cursor-pointer" type="submit">Send message</button>
+            <button className="flex justify-start items-center p-[10px] bg-[#6F4E37] text-[#FFF8E1] rounded-[5px] w-[22rem] cursor-pointer hover:shadow-[0px_0px_20px_0px_#6F4E37] hover:scale-[105%] " type="submit">Send message</button>
         </div>
     </form>
     )

@@ -7,7 +7,7 @@ function NavBar() {
     const activePage = location.pathname;
 
     // Styling for all the links in nav bar
-    const baseStyle = "rounded-[2%] py-[5px] px-[25px] text-center flex items-center justify-center hover:bg-accent-secondary hover:text-[#FFF8E1] hover:shadow-[0px_0px_20px_0px_#6F4E37] hover:scale-[105%] ";
+    const baseStyle = "rounded-[2%] py-[5px] px-[25px] text-center flex items-center justify-center hover:bg-accent-secondary hover:text-[#FFF8E1] ";
 
     // additional styling for active link
     const activeLinkStyle = "bg-accent-secondary text-text-muted shadow-[0px_0px_20px_0px_#6F4E37]";
@@ -32,7 +32,7 @@ function NavBar() {
                     to={link.path} //points to path
 
                     //conditional styling depending on if active link or not
-                    className={`${baseStyle}${activePage === link.path ? `${activeLinkStyle}` : ""}`}
+                    className={`${baseStyle}${activePage === link.path ? `${activeLinkStyle}` : "hover:shadow-[0px_0px_20px_0px_#6F4E37] hover:scale-[105%] "}`}
                 >
                     {link.label}
                 </Link>
