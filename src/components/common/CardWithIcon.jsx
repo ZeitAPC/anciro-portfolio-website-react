@@ -23,7 +23,7 @@ function CardWithIcon({cardData}) {
 
         {/*Some cards need button so adding conditional rendering makes the component flexible*/}
         {ButtonFunction &&
-            <button onClick={ButtonFunction} className="flex justify-start items-center p-[10px] bg-accent-secondary text-cream rounded-[5px] w-[22rem] cursor-pointer">
+            <button onClick={ButtonFunction} className="flex justify-start items-center p-[10px] bg-accent-secondary text-cream rounded-[5px] w-[22rem] cursor-pointer hover:shadow-[0px_0px_20px_0px_#6F4E37] hover:scale-[105%]">
             {ButtonText}
         </button>}
 
